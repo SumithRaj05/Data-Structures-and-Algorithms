@@ -1,7 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<map>
-#include<list>
+#include<bits/stdc++.h>
 using namespace std;
 
 class Edge{
