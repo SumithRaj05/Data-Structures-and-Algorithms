@@ -1,13 +1,19 @@
 #include<iostream>
+
+//class to create a node which further creates another node
+
 class node{
     public:
+        //data members
         int data;
         node *next;
+        //constructor
         node(int ele){
             data = ele;
             next = NULL;
         }
 };
+
 void InsertAtHead(node *&head,int &ele){
     node *newnode = new node(ele);
     if(newnode==NULL)
@@ -18,6 +24,7 @@ void InsertAtHead(node *&head,int &ele){
         printf("inserted element at head\n\n");
     }
 }
+
 void InsertAtPos(node *&head,int &ele,int &pos){
     node *newnode = new node(ele);
     node *temp = head;
@@ -38,6 +45,7 @@ void InsertAtPos(node *&head,int &ele,int &pos){
         printf("Inserted element at pos\n\n");
     }
 }
+
 void InsertAtTail(node *&head, int &ele){
     node* newnode = new node(ele);
     node* temp = head;
@@ -88,43 +96,56 @@ void display(node* &head){
     }
     printf("%d",temp->data);
 }
+
 int main(){
     int choice,ele,pos;
+
+    //initializing empty node
+    
     node *head=NULL;
+
     while(1){
         printf("\n\n1.insert at head\n2.insert at pos\n3.insert at tail\n4.delete at head\n5.delete by ele\n6.display\n7.exit\nEnter choice: ");
         scanf("%d",&choice);
         switch(choice){
-            case 1:
+
+            case 1:     //insert element at head
                 printf("Enter element: ");
                 scanf("%d",&ele);
                 InsertAtHead(head,ele);
                 break;
-            case 2:
+
+            case 2:     //insert element at specified position
                 printf("Enter element: ");
                 scanf("%d",&ele);
                 printf("Enter position: ");
                 scanf("%d",&pos);
                 InsertAtPos(head,ele,pos);
                 break;
-            case 3:
+
+            case 3:     //insert element at tail
                 printf("Enter element: ");
                 scanf("%d",&ele);
                 InsertAtTail(head,ele);
                 break;
-            case 4:
+
+            case 4:     //delete element at head
                 DeleteAtHead(head);
                 break;
-            case 5:
+
+            case 5:     //delete the specified element
                 printf("Enter element: ");
                 scanf("%d",&ele);
                 DeleteByElement(head,ele);
                 break;
-            case 6:
+
+            case 6:     //diplays the list
                 display(head);
                 break;
+
             case 7:
                 return 0;
+
             default:
                 printf("Invalid operator\n");
                 break;

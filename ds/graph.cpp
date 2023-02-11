@@ -1,9 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//creating class of edge containing its both end of vertices
+
 class Edge{
     public:
+        //data members
         int v1,v2;
+        //contructor
         Edge(int v1, int v2){
             this->v1 = v1;
             this->v2 = v2;
@@ -11,7 +15,9 @@ class Edge{
 };
 
 int main(){
-    //adjacency matrix
+
+    //creating adjacency matrix
+    
     int n,m,a,b;
     cout<<"Enter number of vertices:\n";
     cin>>n;
@@ -33,7 +39,8 @@ int main(){
     }
     cout<<endl;
 
-    //adjacency list
+    //creating adjacency list
+
     map<int, list<int>> arrList;
     cout<<"Enter number of edges:\n";
     cin>>m;
@@ -53,7 +60,8 @@ int main(){
     }
     cout<<endl;
 
-    //or
+    //creating edges list using class Edge
+
     vector<Edge> graph;
     int v1,v2;
     cout<<"Enter number of edges:\n";
