@@ -4,6 +4,7 @@
 // book has A pages. He wants to divide 
 // all the books between Alice and Bob 
 // such that:
+
 // Both Alice and Bob get at least one book;
 // The number of pages allotted to Alice 
 // and Bob are either both odd or both even.

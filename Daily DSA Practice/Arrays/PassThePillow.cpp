@@ -1,5 +1,6 @@
 // Leetcode Contest
 
+
 // There are n people standing in a line labeled 
 // from 1 to n. The first person in the line is holding 
 // a pillow initially. Every second, the person holding 

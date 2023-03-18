@@ -5,6 +5,7 @@
 // different days. They each ran for N days 
 // on the ith day, Alice ran 
 // A meters and Bob ran B meters.
+
 // On each day,
 // 1. Alice is unhappy if Bob ran strictly more 
 // than twice her distance, and happy otherwise.

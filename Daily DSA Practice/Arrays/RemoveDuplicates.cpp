@@ -1,3 +1,7 @@
+// Given array A, remove duplicates
+// and return size of array without 
+// duplicates.
+
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
