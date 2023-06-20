@@ -1,0 +1,41 @@
+// You are given a 0-indexed integer array nums.
+
+// The concatenation of two numbers is the number formed 
+// by concatenating their numerals.
+
+// For example, the concatenation of 15, 49 is 1549.
+// The concatenation value of nums is initially equal 
+// to 0. Perform this operation until nums becomes empty:
+
+// If there exists more than one number in nums, pick 
+// the first element and last element in nums respectively 
+// and add the value of their concatenation to the concatenation 
+// value of nums, then delete the first and last element from nums.
+// If one element exists, add its value to the concatenation 
+// value of nums, then delete it.
+// Return the concatenation value of the nums.
+
+
+class Solution {
+public:
+    int concat(int a, int b){
+        string c = to_string(a) + to_string(b);
+        return stoi(c);
+    }
+    long long findTheArrayConcVal(vector<int>& nums) {
+        int low=0, high=nums.size()-1;
+        long long concatValue = 0;
+        int val;
+        while(low <= high){
+            if(low == high){
+                concatValue += nums[low];
+                break;
+            }
+            val = concat(nums[low], nums[high]);
+            concatValue += val;
+            low++;
+            high--;
+        }
+        return concatValue;
+    }
+};
